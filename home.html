@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>ShopLux</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<body>
+    <!-- nav-bar -->
+    <nav id="nav-barr">
+        <div class="logod">
+            <h1 id="logo">ShopLux</h1>
+        </div>
+        <div class="nav-links">
+            <div class="mobile">
+                <ul id="nav-lists">
+                    <li><a class="active" href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+                <p id="cancel-icon" class="cIcon" style="font-weight: bold; font-size: 30px;">x</p>
+                
+            </div>
+            <div class="icons">
+                <!-- <i id="cart-icon" class='bx bx-shopping-bag'>+</i> -->
+                <p id="cart-icon">Cart</p>
+                <div  style="padding-bottom: 15px;">
+                    <img src="assets/menu-icon-removebg-preview.png" style="width: 25px;" id="menu-icon" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- cart-display-items -->
+    <div class="cart-items">
+        <div class="remove-cart-icon">X</div>
+        <h3>My Shopping Cart</h3>
+        <div class="empty-cart-items">No Cart Items</div>
+        <div class="showCarted"></div>
+        <div class="showDiscountCarted"></div>
+        <div class="total-price">
+            <div class="prices">
+                <p>Total Normal Price: <span id="totalPriceInfo"></span></p>
+                <p>Discount Product Total: <span id="totalDiscountInfo"></span></p>
+            </div>
+        </div>
+    </div>
+    <a href="shop.html"></a>
+
+    <!-- hero-section -->
+    <div class="hero-section"  style="margin-bottom: 20px;">
+        <div class="text" data-aos="fade-up">
+            <p class="p-hero-1">Trade-in-offer</p>
+            <h1 class="h1-hero-1">Super value deals</h1>
+            <h1 class="h1-hero-2">On all products</h1>
+            <p class="p-hero-2">Save more with coupons & up to 70% off!</p>
+            <button class="btn-hero">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img data-aos="fade-up" id="img-1-hero" src="assets/image 51.png" alt="">
+        </div>
+    </div>
+
+    <!-- featured -->
+    <!-- <section id="featured">
+        <div class="box">
+            <img src="assets/Frame 611.png" alt="">
+            <button class="featured-btn">Buy Now</button>
+        </div>
+        <div class="box">
+            <img src="assets/Frame 612.png" alt="">
+            <button class="featured-btn">Buy Now</button>
+        </div>
+        <div class="box">
+            <img src="assets/Frame 613.png" alt="">
+            <button class="featured-btn">Buy Now</button>
+        </div>
+        <div class="box">
+            <img src="assets/Frame 614.png" alt="">
+            <button class="featured-btn">Buy Now</button>
+        </div>
+        <div class="box">
+            <img src="assets/Frame 611.png" alt="">
+            <button class="featured-btn">Buy Now</button>
+        </div>
+        <div class="box">
+            <img src="assets/Frame 612.png" alt="">
+            <button class="featured-btn">Buy Now</button>
+        </div>
+    </section> -->
+
+    <!-- input-search section -->
+    <form id="input-section">
+        <input type="text" placeholder="Search for items" id="input-1">
+        <input type="submit" id="submit">
+    </form>
+
+    <section id="product-btns">
+        <button id="all" class="pro-btns">All</button>
+        <button id="shoe" class="pro-btns">Shoe</button>
+        <button id="cameraa" class="pro-btns">Camera</button>
+        <button id="laptop" class="pro-btns">Laptop</button>
+        <button id="jacket" class="pro-btns">Jacket</button>
+        <button id="gamepad" class="pro-btns">Gamepad</button>
+        <button id="biscuit" class="pro-btns">Biscuit</button>
+    </section>
+
+    <!-- products-1 -->
+    <div id="products1">
+        <h1>Featured Products</h1>
+        <p>Summer Collection New Nodern Design</p>
+
+         <!-- error-message -->
+         <div id="error-message"></div>
+
+        <!-- products container -->
+        <div id="products-con">
+            <!-- mapped products -->
+        </div>
+    </div>
+
+    <!-- discount session -->
+    <div class="discount-section">
+        <h4>Regular Services</h4>
+        <h2>Up to <span>70% Off</span> - All t-Shirts & Accessories</h2>
+        <a href="#discount-tshirts"><button id="discount-btn">Explore More</button></a>
+    </div>
+
+    <!-- discount-t-shirts -->
+    <div id="discount-tshirts">
+    </div>
+
+    <!-- tetimonial section -->
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="testimonial-1">
+                    <img src="assets/headshot-4.avif" alt="">
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing 
+                        elit. Inventore, aliquam assumenda quam minus reiciendis at modi alias atque animi esse, similique provident deserunt 
+                        omnis exercitationem molestias consequuntur sed eligendi suscipit?
+                    </p>
+                    <p class="job-description">Store-Owner</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonial-1">
+                    <img src="assets/headshot-3.avif" alt="">
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing 
+                        elit. Inventore, aliquam assumenda quam minus reiciendis at modi alias atque animi esse, similique provident deserunt 
+                        omnis exercitationem molestias consequuntur sed eligendi suscipit?
+                    </p>
+                    <p class="job-description">E-commerce Expert</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonial-1">
+                    <img src="assets/headshot-2.avif" alt="">
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing 
+                        elit. Inventore, aliquam assumenda quam minus reiciendis at modi alias atque animi esse, similique provident deserunt 
+                        omnis exercitationem molestias consequuntur sed eligendi suscipit?
+                    </p>
+                    <p class="job-description">Business Owner</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about-section">
+        <h3>ShopLux - The best Store for Accessories.</h3>
+        <p class="about-1">At Dress Up, we are the best online and in-store clothing boutique for trendy, affordable cute clothes. With weekly new arrivals, we can ensure that you will always have the most up-to-date, cute clothes to shop! Whether online shopping for cute dresses or visiting us in-store, find the perfect outfit that can you take from day to night. 
+            Look and feel your best with Dress Up - your #1 online dress boutique that delivers affordable apparel and new arrivals every week!
+        </p>
+        <p class="about-2">Indulge in a captivating shopping experience at Dress Up Boutique, where women's styles come to life in a affordable fashion. Explore an exquisite array of trendy dresses that embody the latest fashion movements, alongside a collection of irresistibly cute sweaters that add warmth and charm to any ensemble. Our commitment to quality shines through in our carefully curated selection of denim, offering you comfort and durability without compromising on style. Elevate your wardrobe with boutique styles that capture the essence of individuality. And that's not all – enjoy the added perk of free shipping on orders exceeding $75, making your journey towards fashion excellence even more rewarding. 
+            Embrace the world of Dress Up and unlock a realm of limitless style possibilities.</p>
+    </section>
+
+    <!-- footer -->
+    <div id="footer">
+        <h1>ShopLux</h1>
+        <div class="footer-con">
+            <div class="footer-1">
+                <h3 class="quickLinks">Quick Links</h3>
+                <div class="ul-1">
+                    <li>Start a Return</li>
+                    <li>FAQS</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </div>
+            </div>
+            <div class="footer-2">
+                <h3 class="about">About</h3>
+                <div class="ul-2">
+                    <li>Our mission</li>
+                    <li>Location</li>
+                    <li>Collaboration</li>
+                    <li>Job Openings</li>
+                    <li>Interns</li>
+                </div>
+            </div>
+            <div class="footer-3">
+                <h3 class="subscribe">Subscribe and save</h3>
+                <input type="email" id="footer-input" placeholder="Enter your Email">
+                <button id="submit-email">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src="home.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+</html>
